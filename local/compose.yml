@@ -1,0 +1,15 @@
+services:
+  go2rtc:
+    image: alexxit/go2rtc:latest
+    restart: unless-stopped
+    environment:
+      - TZ=Asia/Tokyo
+    ports:
+      - "1984:1984"
+      - "443:443"
+      - "8554:8554"
+      - "8555:8555/tcp"
+      - "8555:8555/udp"
+    volumes:
+      - ./go2rtc:/config
+      - ./certs:/certs:ro

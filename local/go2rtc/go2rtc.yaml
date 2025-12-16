@@ -1,0 +1,15 @@
+# go2rtc configuration for WebRTC 1:N streaming
+streams:
+  camera: []
+
+webrtc:
+  candidates:
+    - 192.168.0.129:8555
+  ice_servers:
+    - urls: ['stun:stun.l.google.com:19302']
+
+api:
+  listen: ":1984"
+  tls_listen: ":443"
+  tls_cert: /certs/local.pem
+  tls_key: /certs/local-key.pem
