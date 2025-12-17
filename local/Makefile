@@ -16,7 +16,7 @@ certs:
 	@echo "Certificates generated in certs/"
 
 up: 
-	@docker compose up -d
+	@LOCAL_IP=$(LOCAL_IP) docker compose up -d
 	@echo ""
 	@echo "=== go2rtc WebRTC Server ==="
 	@echo "HTTP:  http://localhost:1984"

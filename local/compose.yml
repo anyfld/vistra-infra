@@ -4,6 +4,7 @@ services:
     restart: unless-stopped
     environment:
       - TZ=Asia/Tokyo
+      - LOCAL_IP=${LOCAL_IP}
     ports:
       - "1984:1984"
       - "443:443"
