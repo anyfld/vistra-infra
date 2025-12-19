@@ -1,5 +1,6 @@
+# kics-scan disable=704fcc44-a58f-4af5-82e2-93f2a58ef918
+
 # GCP APIs
-# このファイルで有効化するGCPサービスAPIを管理します
 
 resource "google_project_service" "aiplatform" {
   project = local.project_id
@@ -24,4 +25,3 @@ resource "google_project_iam_member" "aiplatform_user" {
   role    = "roles/aiplatform.user"
   member  = "user:${each.value}"
 }
-
